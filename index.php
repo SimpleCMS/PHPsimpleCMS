@@ -36,6 +36,11 @@
         
         ?>
     </div>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div>
+            <br />
+            <?php echo '&copy;'; Site::title(); ?>
+        </div>
+    </footer>
 </body>
 </html>
