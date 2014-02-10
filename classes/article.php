@@ -48,7 +48,7 @@
 			$result = $mysqli->query($query);
 			while($row = $result->fetch_object()){
 				echo '<div class="article">';
-					echo '<a class="article-title" href="?article='.$row->id.'"><h1 class="article-title">' . $row->title . '</h1></a>';
+					echo '<h1 class="article-title"><a class="article-title" href="?article='.$row->id.'">' . $row->title . '</a></h1>';
 					if(strlen($row->content) > 500){
 						$content = substr($row->content, 0, 500);
 						$content .= '<a class="continue-reading" href="?article='.$row->id.'">Continue reading</a>';
@@ -61,10 +61,10 @@
 		}
 		
 		public static function article_view(){
-			if(2){
+			if(isset($_GET['article'])){
 				global $mysqli;
 				
-				$id = 2;
+				$id = $_GET['article'];
 				
 				$query = "SELECT * FROM article WHERE id='".$id."'";
 				$result = $mysqli->query($query);
