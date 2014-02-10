@@ -31,3 +31,15 @@ a{text-decoration: none;}
     text-decoration: none;
     color: blue;
 }
+
+.footer{
+    width: auto;
+    height: auto;
+}
+.footer div{
+    width: 50em;
+    height: auto;
+    text-align: center;
+    font-size: 1.5em;
+    margin: auto;
+}
