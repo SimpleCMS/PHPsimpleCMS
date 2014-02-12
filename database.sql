@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 3.5.8.1deb1
 -- http://www.phpmyadmin.net
 --
 -- Gazda: localhost
--- Timp de generare: 12 Feb 2014 la 17:47
--- Versiune server: 5.6.12-log
--- Versiune PHP: 5.4.16
+-- Timp de generare: 12 Feb 2014 la 18:15
+-- Versiune server: 5.5.32-0ubuntu0.13.04.1
+-- Versiune PHP: 5.4.9-4ubuntu2.3
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,10 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Bază de date: `cms`
+-- BazÄƒ de date: `cms`
 --
-CREATE DATABASE IF NOT EXISTS `cms` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `cms`;
 
 -- --------------------------------------------------------
 
@@ -44,6 +42,19 @@ INSERT INTO `article` (`id`, `title`, `content`, `post_date`) VALUES
 (2, 'Lorem ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo aliquam bibendum. Cras in ante in nulla congue sodales at vitae nunc. In consectetur auctor ipsum hendrerit commodo. Praesent sagittis justo velit, a fermentum velit accumsan vel. In ante lorem, fermentum ut neque eu, faucibus ornare velit. Nullam condimentum condimentum libero quis aliquet. Suspendisse vitae augue sed dolor cursus ultricies quis id libero. Aliquam a pellentesque turpis. Nam semper luctus velit, et venenatis lacus posuere sed. Curabitur nibh turpis, euismod eget quam vitae, faucibus tristique purus. Donec dictum quis sem in gravida.', '2014-02-08 23:29:23'),
 (3, 'Lorem ipsum dolor', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu lorem bibendum, convallis dui eget, ornare sem. Proin quam justo, fermentum vel vestibulum eget, ultricies ut erat. Maecenas gravida ultricies accumsan. Nulla nec sem posuere, tempus velit eu, mollis augue. Integer at tristique turpis. Nullam eu ornare velit. Nulla facilisi. Curabitur in velit quis nisl bibendum sodales sit amet sed dui. Aliquam venenatis fermentum sem, eget porta libero adipiscing quis. Vivamus eget hendrerit lacus. Curabitur eleifend elementum scelerisque. Sed eget enim eleifend, adipiscing enim vitae, consequat dui. Maecenas rhoncus libero ut dignissim luctus. Aliquam sit amet elit libero.\r\n\r\nSed eget erat convallis, tincidunt orci ac, pharetra sem. Maecenas egestas in odio at facilisis. Ut et nisl nibh. Mauris nec suscipit massa. Cras justo tortor, bibendum ac congue a, vestibulum a orci. Morbi feugiat orci pharetra bibendum elementum. Mauris consectetur metus non nisi posuere, sed sollicitudin lectus luctus. Sed posuere leo quis purus aliquam, id lobortis tortor viverra. Nunc mollis massa at turpis fringilla, nec ultrices ipsum sagittis. In ornare consectetur ligula, consequat tincidunt diam porta ac. Donec quis felis leo. Morbi tincidunt mauris lacus, in pretium libero dapibus ut. Curabitur pulvinar egestas bibendum. Ut accumsan eros in elit rhoncus egestas.', '2014-02-08 23:31:39'),
 (4, 'My first post', '<h1>My first post</h1>\r\n<p>Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;</p>', '2014-02-12 17:36:19');
+
+-- --------------------------------------------------------
+
+--
+-- Structura de tabel pentru tabelul `category`
+--
+
+CREATE TABLE IF NOT EXISTS `category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
