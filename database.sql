@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Gazda: localhost
--- Timp de generare: 09 Feb 2014 la 18:51
--- Versiune server: 5.6.14
+-- Timp de generare: 12 Feb 2014 la 17:47
+-- Versiune server: 5.6.12-log
 -- Versiune PHP: 5.4.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `article` (
   `content` text NOT NULL,
   `post_date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Salvarea datelor din tabel `article`
@@ -42,7 +42,8 @@ CREATE TABLE IF NOT EXISTS `article` (
 
 INSERT INTO `article` (`id`, `title`, `content`, `post_date`) VALUES
 (2, 'Lorem ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo aliquam bibendum. Cras in ante in nulla congue sodales at vitae nunc. In consectetur auctor ipsum hendrerit commodo. Praesent sagittis justo velit, a fermentum velit accumsan vel. In ante lorem, fermentum ut neque eu, faucibus ornare velit. Nullam condimentum condimentum libero quis aliquet. Suspendisse vitae augue sed dolor cursus ultricies quis id libero. Aliquam a pellentesque turpis. Nam semper luctus velit, et venenatis lacus posuere sed. Curabitur nibh turpis, euismod eget quam vitae, faucibus tristique purus. Donec dictum quis sem in gravida.', '2014-02-08 23:29:23'),
-(3, 'Lorem ipsum dolor', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu lorem bibendum, convallis dui eget, ornare sem. Proin quam justo, fermentum vel vestibulum eget, ultricies ut erat. Maecenas gravida ultricies accumsan. Nulla nec sem posuere, tempus velit eu, mollis augue. Integer at tristique turpis. Nullam eu ornare velit. Nulla facilisi. Curabitur in velit quis nisl bibendum sodales sit amet sed dui. Aliquam venenatis fermentum sem, eget porta libero adipiscing quis. Vivamus eget hendrerit lacus. Curabitur eleifend elementum scelerisque. Sed eget enim eleifend, adipiscing enim vitae, consequat dui. Maecenas rhoncus libero ut dignissim luctus. Aliquam sit amet elit libero.\r\n\r\nSed eget erat convallis, tincidunt orci ac, pharetra sem. Maecenas egestas in odio at facilisis. Ut et nisl nibh. Mauris nec suscipit massa. Cras justo tortor, bibendum ac congue a, vestibulum a orci. Morbi feugiat orci pharetra bibendum elementum. Mauris consectetur metus non nisi posuere, sed sollicitudin lectus luctus. Sed posuere leo quis purus aliquam, id lobortis tortor viverra. Nunc mollis massa at turpis fringilla, nec ultrices ipsum sagittis. In ornare consectetur ligula, consequat tincidunt diam porta ac. Donec quis felis leo. Morbi tincidunt mauris lacus, in pretium libero dapibus ut. Curabitur pulvinar egestas bibendum. Ut accumsan eros in elit rhoncus egestas.', '2014-02-08 23:31:39');
+(3, 'Lorem ipsum dolor', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu lorem bibendum, convallis dui eget, ornare sem. Proin quam justo, fermentum vel vestibulum eget, ultricies ut erat. Maecenas gravida ultricies accumsan. Nulla nec sem posuere, tempus velit eu, mollis augue. Integer at tristique turpis. Nullam eu ornare velit. Nulla facilisi. Curabitur in velit quis nisl bibendum sodales sit amet sed dui. Aliquam venenatis fermentum sem, eget porta libero adipiscing quis. Vivamus eget hendrerit lacus. Curabitur eleifend elementum scelerisque. Sed eget enim eleifend, adipiscing enim vitae, consequat dui. Maecenas rhoncus libero ut dignissim luctus. Aliquam sit amet elit libero.\r\n\r\nSed eget erat convallis, tincidunt orci ac, pharetra sem. Maecenas egestas in odio at facilisis. Ut et nisl nibh. Mauris nec suscipit massa. Cras justo tortor, bibendum ac congue a, vestibulum a orci. Morbi feugiat orci pharetra bibendum elementum. Mauris consectetur metus non nisi posuere, sed sollicitudin lectus luctus. Sed posuere leo quis purus aliquam, id lobortis tortor viverra. Nunc mollis massa at turpis fringilla, nec ultrices ipsum sagittis. In ornare consectetur ligula, consequat tincidunt diam porta ac. Donec quis felis leo. Morbi tincidunt mauris lacus, in pretium libero dapibus ut. Curabitur pulvinar egestas bibendum. Ut accumsan eros in elit rhoncus egestas.', '2014-02-08 23:31:39'),
+(4, 'My first post', '<h1>My first post</h1>\r\n<p>Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;</p>', '2014-02-12 17:36:19');
 
 -- --------------------------------------------------------
 
@@ -56,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `config` (
   `value` varchar(150) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Salvarea datelor din tabel `config`
@@ -65,6 +66,29 @@ CREATE TABLE IF NOT EXISTS `config` (
 INSERT INTO `config` (`id`, `name`, `value`) VALUES
 (1, 'title', 'Simple CMS'),
 (2, 'description', 'This is a simple CMS written in PHP');
+
+-- --------------------------------------------------------
+
+--
+-- Structura de tabel pentru tabelul `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `full_name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(150) NOT NULL,
+  `access` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Salvarea datelor din tabel `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `full_name`, `email`, `password`, `access`) VALUES
+(1, 'admin', 'Vasile Milea', 'milea.vasile959@gmail.com', '21232f297a57a5a743894a0e4a801fc3', 3);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
