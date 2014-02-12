@@ -1,0 +1,14 @@
+.admin-nav{
+    border: 0.1em solid black;
+    width: 10em;
+    text-align: center;
+    padding: 1em;
+    margin: 1em;
+    background-color: #00007A;
+}
+.admin-nav h2{
+    margin: 0;
+}
+.admin-nav a{
+    color: white;
+}
