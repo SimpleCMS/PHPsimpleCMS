@@ -9,10 +9,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{title} - <?php Site::description(); ?></title>
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <title><?php Site::title(); ?> - <?php Site::description(); ?></title>
+        <link rel="stylesheet" type="text/css" href="templates/main/css/main.css" />
         <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="templates/main/js/script.js"></script>
     </head>
 <body>
     <header class="header">
