@@ -10,9 +10,8 @@
     require_once 'classes/site.php';
     require_once 'classes/template.php';
     
-    $template = new Template();
+    $template = new Template('main');
     
-    $template->assign('title', 'SimpleCMS');
-    $template->render('main');
+    $template->render('index');
 
 ?>
