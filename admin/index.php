@@ -17,7 +17,20 @@
     $template = new Template('main');
     
     if(!empty($_COOKIE['admin']) && $_COOKIE['admin'] == 1){
-        $template->render('index');
+    	(!empty($_GET['page'])) ? $page = $_GET['page'] : $page = '';
+    	switch($page){
+    		case '':
+    			$template->render('index');
+    		break;
+    		
+  			case 'article':
+  				$template->render('article');
+  			break;
+  			
+  			default:
+  				exit('<h1>Error. Page not found.</h1>');
+  			break;
+    	}
     }else{
     echo '<form action="" method="POST">
             <input type="text" name="username" placeholder="Username" required /><br />
