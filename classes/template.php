@@ -3,13 +3,18 @@
     class Template{
         
         private $vars = array();
+        private $template;
+        
+        public function __construct($template){
+            $this->template = $template;
+        }
         
         public function assign($key, $value){
             $this->vars[$key] = $value;
         }
         
-        public function render($template_name){
-            $path = 'templates/' . $template_name . '/index.php';
+        public function render($page){
+            $path = 'templates/' . $this->template . '/' . $page . '.php';
             if(file_exists($path)){
                 $contents = file_get_contents($path);
                 foreach($this->vars as $key => $value){
