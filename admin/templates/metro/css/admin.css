@@ -12,3 +12,10 @@
 .admin-nav a{
     color: white;
 }
+
+.menu-container{
+    border: 0.1em solid black;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+}

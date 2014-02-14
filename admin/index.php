@@ -14,7 +14,7 @@
     
     session_start();
     
-    $template = new Template('main');
+    $template = new Template('metro');
     
     if(!empty($_COOKIE['admin']) && $_COOKIE['admin'] == 1){
     	(!empty($_GET['page'])) ? $page = $_GET['page'] : $page = '';
