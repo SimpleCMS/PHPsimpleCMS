@@ -15,29 +15,32 @@
 				$post_date 	= date("Y-m-d H:i:s");
 				$query = "INSERT INTO article(title, content, post_date)
 						VALUES('".$title."', '".$content."', '".$post_date."')";
-				if($mysqli->query($query)){ return true; }else{ return false; }
+				$mysqli->query($query);
+				header("Location: index.php?page=article&action=manage");
 			}
 		}
 		
 		public static function remove(){
-			if(isset($_POST['article_remove'])){
+			if(isset($_GET['id'])){
 				global $mysqli;
-				$id = $_POST['id'];
+				$id = $_GET['id'];
 				$query = "DELETE FROM article WHERE id='".$id."'";
-				if($mysqli->query($query)){ return true; }else{ return false; }
+				$mysqli->query($query);
+				header("Location: index.php?page=article&action=manage");
 			}
 		}
 		
 		public static function edit(){
 			if(isset($_POST['article_edit'])){
 				global $mysqli;
-				$id 		= $_POST['id'];
+				$id 		= $_GET['id'];
 				$title 		= $_POST['title'];
 				$content 	= $_POST['content'];
 				$post_date 	= date("Y-m-d H:i:s");
 				$query = "UPDATE article SET title='".$title."', content='".$content."', post_date='".$post_date."' 
 					WHERE id='".$id."'";
-				if($mysqli->query($query)){ return true; }else{ return false; }
+				$mysqli->query($query);
+				header("Location: index.php?page=article&action=manage");
 			}
 		}
 		

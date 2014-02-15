@@ -34,6 +34,7 @@
                     setcookie('id', $data->id, 0);
                     setcookie('admin', 1, 0);
                     setcookie('name', $data->full_name, 0);
+                    header('Location: index.php');
                 }else{
                     exit("You are not an admin");
                 }
