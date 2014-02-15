@@ -13,9 +13,10 @@
         <link rel="stylesheet" type="text/css" href="templates/metro/css/main.css" />
         <link rel="stylesheet" type="text/css" href="templates/metro/css/metro-bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="templates/metro/css/metro-bootstrap-responsive.min.css" />
+        <script src="templates/metro/js/script.js"></script>
         <script src="templates/metro/js/metro-ui/metro.min.js"></script>
         <script src="templates/metro/js/jquery/jquery-1.10.2.js"></script>
-        <script src="templates/metro/js/jquery/jquery.ui.widget.js"></script>
+        <script src="templates/metro/js/jquery/jquery.ui.widget.min.js"></script>
     </head>
 <body class="metro">
 	<div class="grid fluid">
@@ -61,14 +62,9 @@
 				<!-- Configuration tile -->
 				<div class="tile-group two fg-black">
 					<div class="tile-group-title">Configuration</div>
-					<a href="index.php?page=global_configuration" class="tile bg-orange">
+					<a href="index.php?page=configuration" class="tile bg-orange">
 						<div class="tile-status">
 							<span class="name">Global configuration</span>
-						</div>
-					</a>
-					<a href="index.php?page=template&action=manage" class="tile bg-orange">
-						<div class="tile-status">
-							<span class="name">Template manager</span>
 						</div>
 					</a>
 				</div>
