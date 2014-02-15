@@ -1,0 +1,10 @@
+body{
+    padding: 1em;
+}
+
+.login-box{
+    border: 0.1em solid black;
+    width: 22em;
+    text-align: center;
+    margin: 3em auto;
+}
