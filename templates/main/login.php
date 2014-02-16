@@ -4,7 +4,7 @@
  * @author loopByte
  * @copyright 2014
  */
-
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,9 +27,7 @@
         </div>
     </div>
     <div class="page">
-        <?php 
-            Article::article_list();
-        ?>
+        
     </div>
     <footer class="footer">
         <div>

@@ -29,6 +29,17 @@
             }
         }
         
+        public static function menu(){
+            global $mysqli;
+            
+            $query = "SELECT * FROM menu ORDER BY position ASC";
+            $result = $mysqli->query($query);
+            while($row = $result->fetch_object()){ ?>
+                <a href="<?php echo $row->link; ?>"><?php echo $row->name; ?></a>
+            <?php 
+            }
+        }
+        
     }
 
 ?>

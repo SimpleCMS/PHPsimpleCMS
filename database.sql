@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.8.1deb1
+-- version 4.0.9
 -- http://www.phpmyadmin.net
 --
--- Gazda: localhost
--- Timp de generare: 12 Feb 2014 la 18:15
--- Versiune server: 5.5.32-0ubuntu0.13.04.1
--- Versiune PHP: 5.4.9-4ubuntu2.3
+-- Gazda: 127.0.0.1
+-- Timp de generare: 16 Feb 2014 la 13:28
+-- Versiune server: 5.6.14
+-- Versiune PHP: 5.5.6
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- BazÄƒ de date: `cms`
+-- Bază de date: `cms`
 --
 
 -- --------------------------------------------------------
@@ -32,16 +32,14 @@ CREATE TABLE IF NOT EXISTS `article` (
   `content` text NOT NULL,
   `post_date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Salvarea datelor din tabel `article`
 --
 
 INSERT INTO `article` (`id`, `title`, `content`, `post_date`) VALUES
-(2, 'Lorem ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla commodo aliquam bibendum. Cras in ante in nulla congue sodales at vitae nunc. In consectetur auctor ipsum hendrerit commodo. Praesent sagittis justo velit, a fermentum velit accumsan vel. In ante lorem, fermentum ut neque eu, faucibus ornare velit. Nullam condimentum condimentum libero quis aliquet. Suspendisse vitae augue sed dolor cursus ultricies quis id libero. Aliquam a pellentesque turpis. Nam semper luctus velit, et venenatis lacus posuere sed. Curabitur nibh turpis, euismod eget quam vitae, faucibus tristique purus. Donec dictum quis sem in gravida.', '2014-02-08 23:29:23'),
-(3, 'Lorem ipsum dolor', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu lorem bibendum, convallis dui eget, ornare sem. Proin quam justo, fermentum vel vestibulum eget, ultricies ut erat. Maecenas gravida ultricies accumsan. Nulla nec sem posuere, tempus velit eu, mollis augue. Integer at tristique turpis. Nullam eu ornare velit. Nulla facilisi. Curabitur in velit quis nisl bibendum sodales sit amet sed dui. Aliquam venenatis fermentum sem, eget porta libero adipiscing quis. Vivamus eget hendrerit lacus. Curabitur eleifend elementum scelerisque. Sed eget enim eleifend, adipiscing enim vitae, consequat dui. Maecenas rhoncus libero ut dignissim luctus. Aliquam sit amet elit libero.\r\n\r\nSed eget erat convallis, tincidunt orci ac, pharetra sem. Maecenas egestas in odio at facilisis. Ut et nisl nibh. Mauris nec suscipit massa. Cras justo tortor, bibendum ac congue a, vestibulum a orci. Morbi feugiat orci pharetra bibendum elementum. Mauris consectetur metus non nisi posuere, sed sollicitudin lectus luctus. Sed posuere leo quis purus aliquam, id lobortis tortor viverra. Nunc mollis massa at turpis fringilla, nec ultrices ipsum sagittis. In ornare consectetur ligula, consequat tincidunt diam porta ac. Donec quis felis leo. Morbi tincidunt mauris lacus, in pretium libero dapibus ut. Curabitur pulvinar egestas bibendum. Ut accumsan eros in elit rhoncus egestas.', '2014-02-08 23:31:39'),
-(4, 'My first post', '<h1>My first post</h1>\r\n<p>Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;Hello! This is my first article.&nbsp;</p>', '2014-02-12 17:36:19');
+(1, 'Lorem ipsum', '<p><span style="font-family: Arial, Helvetica, sans; line-height: 14px; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum eros in leo suscipit aliquam. Nullam sed quam elit. Donec et lorem dapibus, interdum ipsum ut, bibendum justo. Suspendisse aliquet congue neque, id congue tellus pellentesque non. Nunc posuere hendrerit mi eget tincidunt. Aenean hendrerit, erat ac elementum euismod, lectus dolor pulvinar elit, a placerat libero nisl in nisi. Nam fermentum nec tortor vitae rhoncus. Phasellus rhoncus molestie congue. Sed malesuada suscipit fringilla. Ut in magna mi.</span></p>\r\n<p><span style="font-family: Arial, Helvetica, sans; line-height: 14px; text-align: justify;">Nunc vel tellus ac ligula suscipit pretium non rutrum urna. Donec eget tortor a ante tempor dignissim. Quisque fermentum fringilla quam, a ullamcorper nisl posuere eget. Donec at nulla vitae dui ultricies sollicitudin quis sed leo. Integer vulputate magna a felis mattis, tincidunt luctus sapien molestie. Donec molestie sed nisl vitae tristique. Fusce mi tortor, porta a eros at, vehicula mattis nulla. Integer in justo laoreet, varius sapien et, cursus ipsum. Suspendisse dapibus tristique ultricies. Nam tincidunt quam sit amet dictum egestas. Nunc id dapibus erat. Fusce sodales lectus quis dictum tincidunt. Cras a rhoncus urna. Nulla nunc neque, laoreet et ultrices id, malesuada ac quam.</span></p>\r\n<p><span style="font-family: Arial, Helvetica, sans; line-height: 14px; text-align: justify;">Etiam rutrum orci quis neque hendrerit, id volutpat mi pretium. Aliquam aliquet tempus lacus id sagittis. Nulla non interdum nulla. Sed auctor sem id dui molestie dictum at nec nibh. Donec at porta nunc. Ut est turpis, placerat a massa id, lobortis cursus mi. Pellentesque lobortis eros eget libero ultricies, quis facilisis justo lobortis. Nam et odio sed mauris tempus gravida. Suspendisse scelerisque massa ut eros fermentum, et venenatis tellus eleifend.</span></p>\r\n<p><span style="font-family: Arial, Helvetica, sans; line-height: 14px; text-align: justify;">Maecenas enim leo, aliquam a libero vel, tempus pretium lectus. Phasellus sagittis at nisi vel adipiscing. Phasellus risus nisi, volutpat vel luctus eget, vulputate vel mauris. Phasellus orci odio, ornare iaculis tellus ac, cursus condimentum neque. Morbi vel magna semper, vehicula augue vitae, feugiat magna. Donec varius lacus bibendum neque lacinia, eget euismod risus rhoncus. Vivamus porta placerat luctus. Mauris aliquet tempus lorem, ac dapibus massa venenatis ac. Nulla id lectus et est tempor feugiat non eget nulla. Maecenas iaculis purus tristique ipsum mattis, sed fermentum quam mollis. Duis aliquam porttitor volutpat.</span></p>\r\n<p><span style="font-family: Arial, Helvetica, sans; line-height: 14px; text-align: justify;">Curabitur quis sem fermentum, congue tortor at, fringilla leo. Nullam vel turpis odio. Sed vel enim condimentum, vulputate nunc condimentum, imperdiet neque. Etiam dapibus ipsum non erat convallis tempus. Morbi tempus varius tortor, vitae sodales velit feugiat aliquam. Nulla rutrum risus sit amet ornare venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</span></p>', '2014-02-16 09:36:50');
 
 -- --------------------------------------------------------
 
@@ -64,6 +62,7 @@ CREATE TABLE IF NOT EXISTS `category` (
 
 CREATE TABLE IF NOT EXISTS `config` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(150) NOT NULL,
   `name` varchar(50) NOT NULL,
   `value` varchar(150) NOT NULL,
   PRIMARY KEY (`id`),
@@ -74,9 +73,31 @@ CREATE TABLE IF NOT EXISTS `config` (
 -- Salvarea datelor din tabel `config`
 --
 
-INSERT INTO `config` (`id`, `name`, `value`) VALUES
-(1, 'title', 'Simple CMS'),
-(2, 'description', 'This is a simple CMS written in PHP');
+INSERT INTO `config` (`id`, `title`, `name`, `value`) VALUES
+(1, 'Title', 'title', 'SimpleCMS'),
+(2, 'Description', 'description', 'This is a simple CMS written in PHP');
+
+-- --------------------------------------------------------
+
+--
+-- Structura de tabel pentru tabelul `menu`
+--
+
+CREATE TABLE IF NOT EXISTS `menu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `link` varchar(150) NOT NULL,
+  `position` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Salvarea datelor din tabel `menu`
+--
+
+INSERT INTO `menu` (`id`, `name`, `link`, `position`) VALUES
+(1, 'Home', 'index.php', 1);
 
 -- --------------------------------------------------------
 
@@ -92,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(150) NOT NULL,
   `access` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Salvarea datelor din tabel `users`

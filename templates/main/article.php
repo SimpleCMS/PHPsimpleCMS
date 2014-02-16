@@ -28,7 +28,7 @@
     </div>
     <div class="page">
         <?php 
-            Article::article_list();
+            Article::article_view();
         ?>
     </div>
     <footer class="footer">
