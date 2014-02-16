@@ -10,6 +10,7 @@
     require_once '../classes/admin.php';
     require_once '../classes/template.php';
     require_once '../classes/article.php';
+    require_once '../classes/user.php';
     
     Admin::login();
     
