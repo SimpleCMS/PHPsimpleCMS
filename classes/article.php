@@ -51,10 +51,10 @@
 			$result = $mysqli->query($query);
 			while($row = $result->fetch_object()){
 				echo '<div class="article">';
-					echo '<h1 class="article-title"><a class="article-title" href="?article='.$row->id.'">' . $row->title . '</a></h1>';
+					echo '<h1 class="article-title"><a class="article-title" href="?page=article&id='.$row->id.'">' . $row->title . '</a></h1>';
 					if(strlen($row->content) > 500){
 						$content = substr($row->content, 0, 500);
-						$content .= '<a class="continue-reading" href="?article='.$row->id.'">Continue reading</a>';
+						$content .= '<a class="continue-reading" href="?page=article&id='.$row->id.'">Continue reading</a>';
 					}else{
 						$content = $row->content;
 					}
@@ -64,10 +64,10 @@
 		}
 		
 		public static function article_view(){
-			if(isset($_GET['article'])){
+			if(isset($_GET['page'], $_GET['id'])){
 				global $mysqli;
 				
-				$id = $_GET['article'];
+				$id = $_GET['id'];
 				
 				$query = "SELECT * FROM article WHERE id='".$id."'";
 				$result = $mysqli->query($query);
@@ -76,7 +76,9 @@
 				
 				echo '<h1 class="article-view-title">' . $row->title . '</h1>';
 				echo '<article class="article-content">' . $row->content . '</article>';
-				echo '<time class="article-posted-date" datetime="'.$row->post_date.'">Posted on ' . $row->post_date . '</time>';
+				echo '<em><time class="article-posted-date" datetime="'.$row->post_date.'">Posted on ' . $row->post_date . '</time></em>';
+                echo '<br /><br />';
+                echo '<span style="color: blue; font-size: 1.5em;" onclick="goBack()">&larr; Back</span>';
 			}
 		}
 		
