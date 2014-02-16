@@ -12,6 +12,28 @@
     
     $template = new Template('main');
     
-    $template->render('index');
+    (!empty($_GET['page'])) ? $page = $_GET['page'] : $page = '';
+    switch($page){
+        case '':
+            $template->render('index');
+        break;
+        
+        case 'article':
+            $template->render('article');
+        break;
+        
+        case 'login':
+            $template->render('login');
+        break;
+        
+        case 'register':
+            $template->render('register');
+        break;
+        
+        case 'logout':
+            $template->render('logout');
+        break;
+    }
+    
 
 ?>
