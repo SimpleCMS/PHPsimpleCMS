@@ -21,15 +21,14 @@
             <h2 class="description"><em><?php Site::description(); ?></em></h2>
         </div>
     </header>
+    <div class="navigation">
+        <div>
+            <?php Template::menu(); ?>
+        </div>
+    </div>
     <div class="page">
         <?php 
-        
-            if(isset($_GET['article'])){
-                Article::article_view();
-            }else{
-                Article::article_list();
-            }
-        
+            Article::article_list();
         ?>
     </div>
     <footer class="footer">
