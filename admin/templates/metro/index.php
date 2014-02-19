@@ -56,11 +56,16 @@
 							<span class="name">User manager</span>
 						</div>
 					</a>
+					<a href="../logout.php?from=admin" class="tile bg-red">
+						<div class="tile-status">
+							<span class="name">Logout</span>
+						</div>
+					</a>
 				</div>
 				<!-- End users tile -->
 				
 				<!-- Configuration tile -->
-				<div class="tile-group two fg-black">
+				<div class="tile-group one fg-black">
 					<div class="tile-group-title">Configuration</div>
 					<a href="index.php?page=configuration" class="tile bg-orange">
 						<div class="tile-status">
@@ -69,6 +74,17 @@
 					</a>
 				</div>
 				<!-- End configuration tile -->
+				
+				<!-- Structure tile -->
+				<div class="tile-group one fg-black">
+					<div class="tile-group-title">Structure</div>
+					<a href="index.php?page=structure&action=menu" class="tile bg-blue">
+						<div class="tile-status">
+							<span class="name">Menu</span>
+						</div>
+					</a>
+				</div>
+				<!-- End structure tile -->
 			</div>
 		</div>
 	</div>
