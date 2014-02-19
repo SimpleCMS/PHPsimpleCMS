@@ -37,6 +37,10 @@
   				$template->render('configuration');
   			break;
   			
+  			case 'structure':
+  				$template->render('structure');
+  			break;
+  			
   			default:
   				exit('<h1>Error. Page not found.</h1>');
   			break;
