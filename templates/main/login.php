@@ -27,7 +27,14 @@
         </div>
     </div>
     <div class="page">
-        
+        <form action="" method="POST">
+            <input type="text" name="username" placeholder="Username" data-transform="input-control" required /><br />
+            <br />
+            <input type="password" name="password" placeholder="Password" data-transform="input-control" required /><br />
+            <br />
+            <input type="hidden" name="login" value="1" />
+            <input type="submit" value="Login" />
+        </form>
     </div>
     <footer class="footer">
         <div>
