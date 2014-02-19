@@ -9,6 +9,11 @@
     require_once 'classes/article.php';
     require_once 'classes/site.php';
     require_once 'classes/template.php';
+    require_once 'classes/user.php';
+    
+    User::login();
+    
+    session_start();
     
     $template = new Template('main');
     
@@ -34,6 +39,5 @@
             $template->render('logout');
         break;
     }
-    
 
 ?>
