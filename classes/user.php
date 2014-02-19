@@ -10,6 +10,27 @@
             
         }
         
+        public static function login(){
+            if(isset($_POST['login'])){
+                global $mysqli;
+                
+                $username = $_POST['username'];
+                $password = $_POST['password'];
+                $password = md5($password);
+            
+                $query = "SELECT id, full_name, access FROM users WHERE username='".$username."' AND password='".$password."'";
+                $result = $mysqli->query($query);
+                $data = $result->fetch_object();
+                
+                setcookie('id', $data->id);
+                setcookie('access', $data->access);
+                setcookie('full_name', $data->full_name);
+                setcookie('logged', 1);
+                
+                header("location: index.php");
+            }
+        }
+        
         public static function new_user(){
             if(isset($_POST['new_user'])){
                 global $mysqli;
